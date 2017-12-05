@@ -37,6 +37,10 @@ gem 'rmagick'
 gem 'stripe'
 gem 'faker'
 
+gem 'premailer-rails'
+
+gem 'sendgrid-ruby'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
