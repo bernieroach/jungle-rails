@@ -133,4 +133,35 @@ cat3.products.create!({
 })
 
 
+puts "create a user"
+password = Faker::Internet.password(6)
+user1 = User.create!({first_name: Faker::Internet.user_name,
+                     last_name: Faker::Internet.user_name,
+                     email: Faker::Internet.email,
+                     password: password,
+                     password_confirmation: password })
+
+puts "Reviews ..."
+
+ ## CATEGORIES
+
+ puts "Products ... all"
+
+ products = Product.all
+
+ puts "Destroy reviews"
+ Review.destroy_all
+
+puts "Create reviews for products"
+ ## REVIEWS
+ products.each do |product|
+   Review.create!({
+   product_id: product.id,
+   user_id: user1.id,
+   description: "Product review 5 stars!!",
+   rating: 5,
+   user_id: 1,
+ })
+ end
+
 puts "DONE!"
