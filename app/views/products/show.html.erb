@@ -61,6 +61,10 @@
               <strong>Rating</strong>: <%= p.rating %>
 
             </p>
+
+              <% if p.user_id == current_user.id %>
+              <%= button_to('Delete Review', product_review_path(@product, p), method: :delete) %>
+            <% end %>
           <% end %>
           </div>
         </div>
