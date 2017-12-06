@@ -26,6 +26,25 @@
       </div>
     </div>
 
+
+    <% if @product.reviews.size > 0 %>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="dl-vertical">
+          <h2>Review:</h2>
+            <% @product.reviews.reverse_each do |p| %>
+            <p>
+              <strong>Description</strong>: <%= p.description %>
+            </p>
+            <p>
+              <strong>Rating</strong>: <%= p.rating %>
+
+            </p>
+          <% end %>
+          </div>
+        </div>
+      </div>
+      <% end %>
   </article>
 
 </section>
