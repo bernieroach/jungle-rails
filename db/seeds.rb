@@ -160,7 +160,7 @@ puts "Create reviews for products"
    user_id: user1.id,
    description: "Product review 5 stars!!",
    rating: 5,
-   user_id: 1,
+
  })
  end
 
